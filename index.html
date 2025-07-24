@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Install Firefox Add-on</title>
+</head>
+<body>
+  <h1>Press to Install</h1>
+  <button onclick="installExtension()">Install</button>
+
+  <script>
+    function installExtension() {
+      var params = {
+        "My Extension": {
+          URL: "https://drive.google.com/uc?export=download&id=1wSGU_DEEtwlfRV8sohe__jAsWq7EACqU",
+          IconURL: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg",
+          toString: function () { return this.URL; }
+        }
+      };
+      InstallTrigger.install(params);
+    }
+  </script>
+</body>
+</html>
